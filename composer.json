@@ -1,0 +1,27 @@
+{
+  "name": "pelock/jobfuscator",
+  "version": "1.0.0",
+  "description": "JObfuscator is a source code obfuscator for the Java programming language. Obfuscate and protect your Java source code and algorithms from hacking, cracking, reverse engineering, decompilation, and technology theft. JObfuscator provides advanced Java source code parsing based on AST trees, multiple advanced obfuscation strategies are available.",
+  "type": "library",
+  "keywords": ["java", "jar", "war", "class", "source", "obfuscator", "obfuscation", "obfuscate", "decompile", "decompiler", "decompilation"],
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Bartosz Wójcik",
+      "email": "support@pelock.com",
+      "homepage": "https://www.pelock.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "ext-zlib": "*",
+    "ext-json": "*",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "PELock\\JObfuscator\\": "src/",
+      "PELock\\JObfuscator\\examples\\": "examples/"
+    }
+  }
+}
