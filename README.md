@@ -632,7 +632,7 @@ It is compatible with Windows (.NET) and Linux (Mono).
 
 ### JObfuscator command line version
 
-![JObfuscator Command Line Version](https://www.pelock.com//img/en/products/jobfuscator/jobfuscator-java-obfuscator-command-line-1-0.png)
+![JObfuscator Command Line Version](https://www.pelock.com//img/en/products/jobfuscator/jobfuscator-java-obfuscator-obfuscation-1-0-console-comand-line.png)
 
 Java obfuscation can be integrated into your build process or any other batch operation using the JObfuscator command line version.
 
