@@ -102,7 +102,8 @@ class Ideone
     //  rename_methods = false,
     //  rename_variables = true,
     //  shuffle_methods = true,
-    //  mix_code_flow = true
+    //  mix_code_flow = true,
+    //  ints_to_arrays = true
     // )
     public static void main(String[] args) {
 
@@ -119,13 +120,13 @@ class Ideone
 ```java
 ////////////////////////////////////////////////////////////////////////////////
 //
-// An output from JObfuscator v1.0 - Bartosz Wójcik
+// An output from JObfuscator v1.01 - Bartosz Wójcik
 //
 // Website   : https://www.pelock.com/products/jobfuscator
-// Version   : v1.0
-// Params    : /MixCodeFlow /RenMethods /RenVars /ShuffleMethods /CryptStr
+// Version   : v1.01
+// Params    : /MixCodeFlow /RenMethods /RenVars /ShuffleMethods /CryptStr /IntsToArray
 // New lines : Windows (CRLF - \r\n)
-// Date      : 14.07.2021
+// Date      : 28.07.2021
 //
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -135,72 +136,73 @@ import java.io.*;
 
 class Ideone {
 
-    public static double LV__TKUxvBBALYq_PoTojpU_(double[] numArray) {
-        int var_2890 = 0;
-        double PJYBTTRI = 0;
-        int var_1846 = 0;
-        double y_YQH_fvL_0_gw6UWKGKBw = 0, eMzlai = 0;
-        var_2890 = 190507166;
-        while (var_2890 != 513426540) {
-            switch(var_2890) {
-                case 618488464:
-                    for (double FVEGRM : numArray) {
-                        y_YQH_fvL_0_gw6UWKGKBw += FVEGRM;
+    public static double func_2837(double[] numArray) {
+        int[] var_1503 = { 16773034, 161954010, 805149903, 0, 1398016587, 1322929540, 709627242, 2103650494, 70093929, 2 };
+        int TWRCHOYPM_HAUIOXNTK = var_1503[3];
+        double YMWMKMVWDG = 0;
+        int iRrxjpzptTjjlcNcwbro = 0;
+        double var_1127 = 0, WJSLVS_FVOLPTLOC_ROSDCT = 0;
+        TWRCHOYPM_HAUIOXNTK = var_1503[2];
+        while (TWRCHOYPM_HAUIOXNTK != var_1503[0]) {
+            switch(TWRCHOYPM_HAUIOXNTK) {
+                case 161954010:
+                    YMWMKMVWDG = var_1127 / iRrxjpzptTjjlcNcwbro;
+                    TWRCHOYPM_HAUIOXNTK -= -var_1503[5];
+                    break;
+                case 1484883550:
+                    for (double var_1710 : numArray) {
+                        WJSLVS_FVOLPTLOC_ROSDCT += Math.pow(var_1710 - YMWMKMVWDG, var_1503[9]);
                     }
-                    var_2890 ^= 410092703;
+                    TWRCHOYPM_HAUIOXNTK += -var_1503[8];
                     break;
-                case 1017964047:
-                    PJYBTTRI = y_YQH_fvL_0_gw6UWKGKBw / var_1846;
-                    var_2890 ^= 536958471;
+                case 2103650494:
+                    iRrxjpzptTjjlcNcwbro = numArray.length;
+                    TWRCHOYPM_HAUIOXNTK += -var_1503[6];
                     break;
-                case 481144840:
-                    for (double eNydxsfVevicyry : numArray) {
-                        eMzlai += Math.pow(eNydxsfVevicyry - PJYBTTRI, 2);
+                case 1414789621:
+                    TWRCHOYPM_HAUIOXNTK -= var_1503[4];
+                    break;
+                case 805149903:
+                    WJSLVS_FVOLPTLOC_ROSDCT = 0.0;
+                    TWRCHOYPM_HAUIOXNTK = var_1503[7];
+                    break;
+                case 1394023252:
+                    for (double esCneZa9_592q_7_zU : numArray) {
+                        var_1127 += esCneZa9_592q_7_zU;
                     }
-                    var_2890 ^= 646054028;
-                    break;
-                case 976203908:
-                    var_2890 ^= 615904488;
-                    break;
-                case 394538455:
-                    var_1846 = numArray.length;
-                    var_2890 += 223950009;
-                    break;
-                case 190507166:
-                    eMzlai = 0.0;
-                    var_2890 ^= 484361545;
+                    TWRCHOYPM_HAUIOXNTK = var_1503[1];
                     break;
             }
         }
-        return Math.sqrt(eMzlai / var_1846);
+        return Math.sqrt(WJSLVS_FVOLPTLOC_ROSDCT / iRrxjpzptTjjlcNcwbro);
     }
 
     public static void main(String[] args) {
-        int ATERAER = 0;
-        double[] hYbhjk = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        double var_3119 = 0;
-        ATERAER = 2011404002;
-        while (ATERAER != 1465474782) {
-            switch(ATERAER) {
-                case 2011404002:
-                    double[] QHo2E0x_rPfV6_CM0_3F_yrSS = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-                    ATERAER ^= 942522537;
+        int[] var_790 = { 365752868, 851221905, 25, 65535, 0, 485469037, 795894447, 401516633 };
+        int cW3xMWsn_C7UwiY6ExFuU__X = var_790[4];
+        double var_1834 = 0;
+        double[] g_hTqcygvfmuVgqnycpRtyciz = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        cW3xMWsn_C7UwiY6ExFuU__X = var_790[7];
+        while (cW3xMWsn_C7UwiY6ExFuU__X != var_790[5]) {
+            switch(cW3xMWsn_C7UwiY6ExFuU__X) {
+                case 949930742:
+                    var_1834 = func_2837(g_hTqcygvfmuVgqnycpRtyciz);
+                    cW3xMWsn_C7UwiY6ExFuU__X = var_790[1];
                     break;
-                case 888459970:
-                    String MNQRKEJ_FBJXXATJV_CYFYCMKMJ = "";
-                    int[] var_967 = { 0x10DA, 0x103B, 0x1028, 0x103D, 0x102B, 0x1028, 0x1039, 0x102B, 0x10EF, 0x10CB, 0x1034, 0x1005, 0x1030, 0x1028, 0x103B, 0x1030, 0x103E, 0x103D, 0x10EF, 0x10CC, 0x10EF, 0x10F4, 0x10FD, 0x10C5, 0x1035 };
-                    for (int M_xCztBqM_jYZQW0A_ = 0, z_wQCL5jGQZ_7XcHYZR_Rt_ej = 0; M_xCztBqM_jYZQW0A_ < 25; M_xCztBqM_jYZQW0A_++) {
-                        z_wQCL5jGQZ_7XcHYZR_Rt_ej = var_967[M_xCztBqM_jYZQW0A_];
-                        z_wQCL5jGQZ_7XcHYZR_Rt_ej ^= 0x6CA4;
-                        z_wQCL5jGQZ_7XcHYZR_Rt_ej -= 0x7C2B;
-                        MNQRKEJ_FBJXXATJV_CYFYCMKMJ += (char) (z_wQCL5jGQZ_7XcHYZR_Rt_ej & 0xFFFF);
+                case 401516633:
+                    double[] nFxybvzyibGbscguuDbtalok = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+                    cW3xMWsn_C7UwiY6ExFuU__X ^= var_790[6];
+                    break;
+                case 851221905:
+                    String var_2996 = "";
+                    int[] g_bXiluergf = { 0x0053, 0x0073, 0x005F, 0x006B, 0x0060, 0x005C, 0x006C, 0x005D, 0x0018, 0x003B, 0x005B, 0x006B, 0x005D, 0x0054, 0x0066, 0x005A, 0x005F, 0x005D, 0x000E, 0x002A, 0x000C, 0x0010, 0x0018, 0x001F, 0x004E };
+                    for (int mz4_C_ZS_vx2imtni61li_ = 0, bOY__H_s8XgO_P52NscyFre = 0; mz4_C_ZS_vx2imtni61li_ < var_790[2]; mz4_C_ZS_vx2imtni61li_++) {
+                        bOY__H_s8XgO_P52NscyFre = g_bXiluergf[mz4_C_ZS_vx2imtni61li_];
+                        bOY__H_s8XgO_P52NscyFre += mz4_C_ZS_vx2imtni61li_;
+                        var_2996 += (char) (bOY__H_s8XgO_P52NscyFre & var_790[3]);
                     }
-                    System.out.format(MNQRKEJ_FBJXXATJV_CYFYCMKMJ, var_3119);
-                    ATERAER = 1465474782;
-                    break;
-                case 1338922571:
-                    var_3119 = LV__TKUxvBBALYq_PoTojpU_(hYbhjk);
-                    ATERAER ^= 2067432585;
+                    System.out.format(var_2996, var_1834);
+                    cW3xMWsn_C7UwiY6ExFuU__X += -var_790[0];
                     break;
             }
         }
@@ -250,7 +252,7 @@ The installation package is available at https://packagist.org/packages/pelock/j
  *
  * In this example we will obfuscate sample source with default options.
  *
- * Version        : v1.0
+ * Version        : v1.01
  * Language       : PHP
  * Author         : Bartosz Wójcik
  * Web page       : https://www.pelock.com
@@ -319,7 +321,8 @@ class Ideone
     //  rename_methods = false,
     //  rename_variables = true,
     //  shuffle_methods = true,
-    //  mix_code_flow = true
+    //  mix_code_flow = true,
+    //  ints_to_arrays = true
     // )
     public static void main(String[] args) {
 
@@ -381,7 +384,7 @@ else
  *
  * In this example we will obfuscate sample source with custom options.
  *
- * Version        : v1.0
+ * Version        : v1.01
  * Language       : PHP
  * Author         : Bartosz Wójcik
  * Web page       : https://www.pelock.com
@@ -441,6 +444,11 @@ $myJObfuscator->renameMethods = true;
 $myJObfuscator->cryptStrings = true;
 
 //
+// for each method, extract all possible integers from the code and store them in an array
+//
+$myJObfuscator->intsToArrays = true;
+
+//
 // source code in Java format
 //
 $sourceCode = 'import java.util.*;
@@ -487,7 +495,8 @@ class Ideone
     //  rename_methods = false,
     //  rename_variables = true,
     //  shuffle_methods = true,
-    //  mix_code_flow = true
+    //  mix_code_flow = true,
+    //  ints_to_arrays = true
     // )
     public static void main(String[] args) {
 
