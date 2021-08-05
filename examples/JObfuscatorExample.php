@@ -5,7 +5,7 @@
  *
  * In this example we will obfuscate sample source with custom options.
  *
- * Version        : v1.01
+ * Version        : v1.04
  * Language       : PHP
  * Author         : Bartosz Wójcik
  * Web page       : https://www.pelock.com
@@ -65,6 +65,11 @@ $myJObfuscator->renameMethods = true;
 $myJObfuscator->shuffleMethods = true;
 
 //
+// encrypt integers using more than 15 floating point math functions from the java.lang.math.* class
+//
+$myJObfuscator->intsMathCrypt = true;
+
+//
 // encrypt strings using polymorphic encryption algorithms
 //
 $myJObfuscator->cryptStrings = true;
@@ -73,6 +78,11 @@ $myJObfuscator->cryptStrings = true;
 // for each method, extract all possible integers from the code and store them in an array
 //
 $myJObfuscator->intsToArrays = true;
+
+//
+// for each method, extract all possible doubles from the code and store them in an array
+//
+$myJObfuscator->dblsToArrays = true;
 
 //
 // source code in Java format
@@ -117,12 +127,14 @@ class Ideone
     // annotation alone)
     //
     //@Obfuscate(
+    //  ints_math_crypt = true,
     //  crypt_strings = true,
     //  rename_methods = false,
     //  rename_variables = true,
     //  shuffle_methods = true,
     //  mix_code_flow = true,
-    //  ints_to_arrays = true
+    //  ints_to_arrays = true,
+    //  dbls_to_arrays = true
     // )
     public static void main(String[] args) {
 

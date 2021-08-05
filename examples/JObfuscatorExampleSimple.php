@@ -5,7 +5,7 @@
  *
  * In this example we will obfuscate sample source with default options.
  *
- * Version        : v1.01
+ * Version        : v1.04
  * Language       : PHP
  * Author         : Bartosz Wójcik
  * Web page       : https://www.pelock.com
@@ -70,12 +70,14 @@ class Ideone
     // annotation alone)
     //
     //@Obfuscate(
+    //  ints_math_crypt = true,
     //  crypt_strings = true,
     //  rename_methods = false,
     //  rename_variables = true,
     //  shuffle_methods = true,
     //  mix_code_flow = true,
-    //  ints_to_arrays = true
+    //  ints_to_arrays = true,
+    //  dbls_to_arrays = true
     // )
     public static void main(String[] args) {
 

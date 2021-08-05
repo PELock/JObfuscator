@@ -2,7 +2,7 @@
 /******************************************************************************
  * JObfuscator WebApi interface
  *
- * Version        : v1.01
+ * Version        : v1.04
  * Language       : PHP
  * Author         : Bartosz Wójcik
  * Web page       : https://www.pelock.com
@@ -49,6 +49,11 @@ class JObfuscator
 	public $shuffleMethods = true;
 
 	/**
+	 * @var bool encrypt integers using more than 15 floating point math functions from the java.lang.math.* class
+	 */
+	public $intsMathCrypt = true;
+
+	/**
 	 * @var bool encrypt strings using polymorphic encryption algorithms
 	 */
 	public $cryptStrings = true;
@@ -57,6 +62,11 @@ class JObfuscator
 	 * @var bool for each method, extract all possible integers from the code and store them in an array
 	 */
 	public $intsToArrays = true;
+
+	/**
+	 * @var bool for each method, extract all possible doubles from the code and store them in an array
+	 */
+	public $dblsToArrays = true;
 
 	/**
 	 * @var integer success
@@ -166,8 +176,10 @@ class JObfuscator
 		if ($this->renameVariables) $ParamsArray["rename_variables"] = "1";
 		if ($this->renameMethods) $ParamsArray["rename_methods"] = "1";
 		if ($this->shuffleMethods) $ParamsArray["shuffle_methods"] = "1";
+		if ($this->intsMathCrypt) $ParamsArray["ints_math_crypt"] = "1";
 		if ($this->cryptStrings) $ParamsArray["crypt_strings"] = "1";
 		if ($this->intsToArrays) $ParamsArray["ints_to_arrays"] = "1";
+		if ($this->dblsToArrays) $ParamsArray["dbls_to_arrays"] = "1";
 
 		//
 		// check if compression is enabled
