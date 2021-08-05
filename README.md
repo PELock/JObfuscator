@@ -470,7 +470,7 @@ $myJObfuscator->renameMethods = true;
 $myJObfuscator->shuffleMethods = true;
 
 //
-// encrypt integers using more than 15 floating point math functions from the java.lang.math.* class
+// encrypt integers using more than 15 floating point math functions from the java.lang.Math.* class
 //
 $myJObfuscator->intsMathCrypt = true;
 

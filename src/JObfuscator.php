@@ -49,7 +49,7 @@ class JObfuscator
 	public $shuffleMethods = true;
 
 	/**
-	 * @var bool encrypt integers using more than 15 floating point math functions from the java.lang.math.* class
+	 * @var bool encrypt integers using more than 15 floating point math functions from the java.lang.Math.* class
 	 */
 	public $intsMathCrypt = true;
 
