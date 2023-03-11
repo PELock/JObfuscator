@@ -689,4 +689,7 @@ It is compatible with Windows (.NET) and Linux (Mono).
 Java obfuscation can be integrated into your build process or any other batch operation using the JObfuscator command line version.
 
 Bartosz Wójcik
-https://www.pelock.com
+
+* Visit my site at — https://www.pelock.com
+* Twitter — https://twitter.com/PELock
+* GitHub — https://github.com/PELock
