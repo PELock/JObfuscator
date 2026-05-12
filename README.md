@@ -104,7 +104,6 @@ class Ideone
     //  array_char_crypt = true,
     //  array_double_crypt = true,
     //  array_string_crypt = true,
-    //  remove_comments = true,
     //  crypt_strings = true,
     //  rename_methods = false,
     //  shuffle_methods = true,
@@ -839,7 +838,6 @@ class Ideone
     //  array_char_crypt = true,
     //  array_double_crypt = true,
     //  array_string_crypt = true,
-    //  remove_comments = true,
     //  crypt_strings = true,
     //  rename_methods = false,
     //  shuffle_methods = true,
@@ -963,11 +961,6 @@ $myJObfuscator->arrayDoubleCrypt = true;
 $myJObfuscator->arrayStringCrypt = true;
 
 //
-// strip comments when parsing source
-//
-$myJObfuscator->removeComments = true;
-
-//
 // encrypt strings using polymorphic encryption algorithms
 //
 $myJObfuscator->cryptStrings = true;
@@ -1084,7 +1077,6 @@ class Ideone
     //  array_char_crypt = true,
     //  array_double_crypt = true,
     //  array_string_crypt = true,
-    //  remove_comments = true,
     //  crypt_strings = true,
     //  rename_methods = false,
     //  shuffle_methods = true,

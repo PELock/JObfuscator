@@ -24,6 +24,11 @@ class JObfuscator
 	protected $_ApiKey = null;
 
 	/**
+	 * @var bool strip comments when parsing source (not exposed publicly; controls default API behavior)
+	 */
+	private $removeComments = true;
+
+	/**
 	 * @var bool should the source code be compressed
 	 */
 	public $enableCompression = true;
@@ -47,11 +52,6 @@ class JObfuscator
 	 * @var bool transform String array initializers via array encryption
 	 */
 	public $arrayStringCrypt = true;
-
-	/**
-	 * @var bool strip comments when parsing source
-	 */
-	public $removeComments = true;
 
 	/**
 	 * @var bool change linear code execution flow to non-linear version
