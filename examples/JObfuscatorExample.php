@@ -5,7 +5,7 @@
  *
  * In this example we will obfuscate sample source with custom options.
  *
- * Version        : v1.04
+ * Version        : v1.05
  * Language       : PHP
  * Author         : Bartosz Wójcik
  * Web page       : https://www.pelock.com
@@ -45,14 +45,22 @@ $myJObfuscator->enableCompression = true;
 //
 
 //
-// change linear code execution flow to non-linear version
+// array initializer encryption (int / char / double / String)
 //
-$myJObfuscator->mixCodeFlow = true;
+$myJObfuscator->arrayIntCrypt = true;
+$myJObfuscator->arrayCharCrypt = true;
+$myJObfuscator->arrayDoubleCrypt = true;
+$myJObfuscator->arrayStringCrypt = true;
 
 //
-// rename variable names to random string values
+// strip comments when parsing source
 //
-$myJObfuscator->renameVariables = true;
+$myJObfuscator->removeComments = true;
+
+//
+// encrypt strings using polymorphic encryption algorithms
+//
+$myJObfuscator->cryptStrings = true;
 
 //
 // rename method names to random string values
@@ -70,9 +78,44 @@ $myJObfuscator->shuffleMethods = true;
 $myJObfuscator->intsMathCrypt = true;
 
 //
-// encrypt strings using polymorphic encryption algorithms
+// encrypt doubles using floating point math from the java.lang.Math.* class
 //
-$myJObfuscator->cryptStrings = true;
+$myJObfuscator->dblsMathCrypt = true;
+
+//
+// rename variable names to random string values
+//
+$myJObfuscator->renameVariables = true;
+
+//
+// change linear code execution flow to non-linear version
+//
+$myJObfuscator->mixCodeFlow = true;
+
+//
+// store string fragments in char array vaults
+//
+$myJObfuscator->stringCharVault = true;
+
+//
+// derive integer literals via double-based math
+//
+$myJObfuscator->intsFromDoubleMath = true;
+
+//
+// insert opaque predicate chains into control flow
+//
+$myJObfuscator->opaqueMixerChain = true;
+
+//
+// replace boolean conditions with equivalent complex expressions
+//
+$myJObfuscator->complexifyBooleans = true;
+
+//
+// wrap code in try/finally blocks with dead noise
+//
+$myJObfuscator->tryFinallyNoise = true;
 
 //
 // for each method, extract all possible integers from the code and store them in an array
@@ -127,12 +170,23 @@ class Ideone
     // annotation alone)
     //
     //@Obfuscate(
-    //  ints_math_crypt = true,
+    //  array_int_crypt = true,
+    //  array_char_crypt = true,
+    //  array_double_crypt = true,
+    //  array_string_crypt = true,
+    //  remove_comments = true,
     //  crypt_strings = true,
     //  rename_methods = false,
-    //  rename_variables = true,
     //  shuffle_methods = true,
+    //  ints_math_crypt = true,
+    //  dbls_math_crypt = true,
+    //  rename_variables = true,
     //  mix_code_flow = true,
+    //  string_char_vault = true,
+    //  ints_from_double_math = true,
+    //  opaque_mixer_chain = true,
+    //  complexify_booleans = true,
+    //  try_finally_noise = true,
     //  ints_to_arrays = true,
     //  dbls_to_arrays = true
     // )

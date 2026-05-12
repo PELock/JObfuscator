@@ -2,7 +2,7 @@
 /******************************************************************************
  * JObfuscator WebApi interface
  *
- * Version        : v1.04
+ * Version        : v1.05
  * Language       : PHP
  * Author         : Bartosz Wójcik
  * Web page       : https://www.pelock.com
@@ -27,6 +27,31 @@ class JObfuscator
 	 * @var bool should the source code be compressed
 	 */
 	public $enableCompression = true;
+
+	/**
+	 * @var bool transform integer array initializers via array encryption
+	 */
+	public $arrayIntCrypt = true;
+
+	/**
+	 * @var bool transform char array initializers via array encryption
+	 */
+	public $arrayCharCrypt = true;
+
+	/**
+	 * @var bool transform double array initializers via array encryption
+	 */
+	public $arrayDoubleCrypt = true;
+
+	/**
+	 * @var bool transform String array initializers via array encryption
+	 */
+	public $arrayStringCrypt = true;
+
+	/**
+	 * @var bool strip comments when parsing source
+	 */
+	public $removeComments = true;
 
 	/**
 	 * @var bool change linear code execution flow to non-linear version
@@ -54,9 +79,39 @@ class JObfuscator
 	public $intsMathCrypt = true;
 
 	/**
+	 * @var bool encrypt doubles using floating point math from the java.lang.Math.* class
+	 */
+	public $dblsMathCrypt = true;
+
+	/**
 	 * @var bool encrypt strings using polymorphic encryption algorithms
 	 */
 	public $cryptStrings = true;
+
+	/**
+	 * @var bool store string fragments in char arrays (string char vault)
+	 */
+	public $stringCharVault = true;
+
+	/**
+	 * @var bool derive integer literals via double-based math
+	 */
+	public $intsFromDoubleMath = true;
+
+	/**
+	 * @var bool insert opaque predicate chains into control flow
+	 */
+	public $opaqueMixerChain = true;
+
+	/**
+	 * @var bool replace boolean conditions with equivalent complex expressions
+	 */
+	public $complexifyBooleans = true;
+
+	/**
+	 * @var bool wrap code in try/finally blocks with dead noise
+	 */
+	public $tryFinallyNoise = true;
 
 	/**
 	 * @var bool for each method, extract all possible integers from the code and store them in an array
@@ -170,14 +225,25 @@ class JObfuscator
 		}
 
 		//
-		// obfuscation strategies
+		// obfuscation strategies (order aligned with Java Obfuscator.DEFAULT_PARAMS)
 		//
-		if ($this->mixCodeFlow) $ParamsArray["mix_code_flow"] = "1";
-		if ($this->renameVariables) $ParamsArray["rename_variables"] = "1";
+		if ($this->arrayIntCrypt) $ParamsArray["array_int_crypt"] = "1";
+		if ($this->arrayCharCrypt) $ParamsArray["array_char_crypt"] = "1";
+		if ($this->arrayDoubleCrypt) $ParamsArray["array_double_crypt"] = "1";
+		if ($this->arrayStringCrypt) $ParamsArray["array_string_crypt"] = "1";
+		if ($this->removeComments) $ParamsArray["remove_comments"] = "1";
+		if ($this->cryptStrings) $ParamsArray["crypt_strings"] = "1";
 		if ($this->renameMethods) $ParamsArray["rename_methods"] = "1";
 		if ($this->shuffleMethods) $ParamsArray["shuffle_methods"] = "1";
 		if ($this->intsMathCrypt) $ParamsArray["ints_math_crypt"] = "1";
-		if ($this->cryptStrings) $ParamsArray["crypt_strings"] = "1";
+		if ($this->dblsMathCrypt) $ParamsArray["dbls_math_crypt"] = "1";
+		if ($this->renameVariables) $ParamsArray["rename_variables"] = "1";
+		if ($this->mixCodeFlow) $ParamsArray["mix_code_flow"] = "1";
+		if ($this->stringCharVault) $ParamsArray["string_char_vault"] = "1";
+		if ($this->intsFromDoubleMath) $ParamsArray["ints_from_double_math"] = "1";
+		if ($this->opaqueMixerChain) $ParamsArray["opaque_mixer_chain"] = "1";
+		if ($this->complexifyBooleans) $ParamsArray["complexify_booleans"] = "1";
+		if ($this->tryFinallyNoise) $ParamsArray["try_finally_noise"] = "1";
 		if ($this->intsToArrays) $ParamsArray["ints_to_arrays"] = "1";
 		if ($this->dblsToArrays) $ParamsArray["dbls_to_arrays"] = "1";
 
