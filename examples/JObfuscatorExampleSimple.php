@@ -5,7 +5,7 @@
  *
  * In this example we will obfuscate sample source with default options.
  *
- * Version        : v1.05
+ * Version        : v1.06
  * Language       : PHP
  * Author         : Bartosz Wójcik
  * Web page       : https://www.pelock.com
@@ -74,6 +74,7 @@ class Ideone
     //  array_char_crypt = true,
     //  array_double_crypt = true,
     //  array_string_crypt = true,
+    //  split_strings = true,
     //  crypt_strings = true,
     //  rename_methods = false,
     //  shuffle_methods = true,

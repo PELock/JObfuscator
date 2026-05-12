@@ -2,7 +2,7 @@
 /******************************************************************************
  * JObfuscator WebApi interface
  *
- * Version        : v1.05
+ * Version        : v1.06
  * Language       : PHP
  * Author         : Bartosz Wójcik
  * Web page       : https://www.pelock.com
@@ -87,6 +87,11 @@ class JObfuscator
 	 * @var bool encrypt strings using polymorphic encryption algorithms
 	 */
 	public $cryptStrings = true;
+
+	/**
+	 * @var bool split string literals into nested .concat chains (API parameter {@code split_strings}; runs before string encryption)
+	 */
+	public $splitStrings = false;
 
 	/**
 	 * @var bool store string fragments in char arrays (string char vault)
@@ -232,6 +237,7 @@ class JObfuscator
 		if ($this->arrayDoubleCrypt) $ParamsArray["array_double_crypt"] = "1";
 		if ($this->arrayStringCrypt) $ParamsArray["array_string_crypt"] = "1";
 		if ($this->removeComments) $ParamsArray["remove_comments"] = "1";
+		if ($this->splitStrings) $ParamsArray["split_strings"] = "1";
 		if ($this->cryptStrings) $ParamsArray["crypt_strings"] = "1";
 		if ($this->renameMethods) $ParamsArray["rename_methods"] = "1";
 		if ($this->shuffleMethods) $ParamsArray["shuffle_methods"] = "1";
