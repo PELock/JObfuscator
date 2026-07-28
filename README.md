@@ -1605,5 +1605,5 @@ Java obfuscation can be integrated into your build process or any other batch op
 Bartosz Wójcik
 
 * Visit my site at — https://www.pelock.com
-* Twitter — https://twitter.com/PELock
+* X — https://x.com/PELock
 * GitHub — https://github.com/PELock
